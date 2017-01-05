@@ -39,8 +39,6 @@
 // and returns an array of all numbers from 1 - 100 that are 
 // evenly divisible by both.
 
-//If Number is evenly divisible by num 1 & num 2, print that number
-
 //1. start with an array 1 -100 (range)
 //2. keep things divisible by first and second, discard the rest (filter)
 
@@ -65,51 +63,9 @@ function multiples(first, second) {
     // let nums = range(1,100).filter(function(current) {
     //     return current % first === 0;
     // });
-
     return nums;
 }
-
 console.log(multiples(5, 7));
-
-
-// let divisorArray = range(1, 100);
-// // console.log(divisorArray);
-// divisorArray.indexOf(num / )
-
-// let Number = 
-// function modulus(number);
-
-//     if (number % = 0;)
-//     return true;
-//     }
-
-// function multiples(num1, num2) {
-//     let num1 = displayArray.
-//     if(number % num1 === 0)
-//     if (number & num2 === 0)
-//     return true;
-
-//     divisorArray.length
-//     divisorArray
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // 02 | divisors
@@ -117,90 +73,85 @@ console.log(multiples(5, 7));
 // Write a function called divisors that accepts a number and 
 // returns an array of all of the numbers that divide evenly into it.
 
-//Steps:
-//write function for divisors that returns an array
-//use map to apply the division
+function range(min, max) {
+    let arr = [];
 
-// let divisorArray = [];
+    for (let i = min; i <= max; i++) {
+        arr.push(i);
+    }
 
-// function divisors(num) {
+    return arr;
+}
+
+function divisors(current) {
+    let array = range(1, current);
+    return array;
+}
+//I need to divide current by every number in the array
+function isDivisible(num) {
+    return num % divisors(current).length === 0
+}
+// console.log(isDivisible(100));
+// return current % array.length === 0
+let newArray = range(1, current).filter(isDivisible);
+return newArray;
 
 
 
-//     return num / number === .toFixed(0);
+console.log(divisors(100));
 
+//03 Boost
 
+// Write a function called boost that accepts a number as a parameter and 
+// increments all of the digits of the number individually. 
+// If the digit is 0-8, it should be incremented, 
+// but if its 9 then it should be reset to 0. Return the incremented number.
 
-//     if num / number  === num.toFixed(0)
-//     .push(divisorArray)
-// }
-
-// let divisorArray = 
-// console.log(divisorArray)
-
-//BOOST
-//boost(48)
 //1. Convert 48 to [4, 8] -- suggestion: convert to string, then split, then parseInt 
 //2. Increment all the digits (or go back to 0 if its a 9)
 //3. Recombine them with join()
-//parseInt('14') // logs 14
-
-// function boost(num) {
-//     function parse()
-//     num.soString().split('') //note:  array of STRINGS)
-// }
-
-
-// function boost(num) {}
-
-
-// function increment(num) {
-//     if (num < 9) {
-//         num = num + 1;
-//     } else {
-//         if (num === 9) {  //single equal means set num = to 
-//             num = 0;
-//         }
-//     }
-//     return num;
-// }
-
-// function boost(num) {
-//     function parse(single) {
-//         return parseInt(single);
-//     }
-
-// let digits = num.toString().split('') //note:  array of STRINGS
-// digits = digits.map(parse);
-// }
-// digits = digits.map(parse);
-// }
-
-
-// boost(5629)
-
-// boost(num)
-// // 1.  5629  [5,6,2,9]
-// // [6,7,3,0]
-// // 6730
-
-// num.toString().split()
 
 function boost(num) {
-      function parse(single) {
-    return parseInt(single);
-      }
-
-function increment(single) {
-    if(single < 9) {
-        return single + 1;
-    } else {
-        return 0;
+    function parse(single) {
+        return parseInt(single);
     }
-}
+
+    function increment(single) {
+        if (single < 9) {
+            return single + 1;
+        } else {
+            return 0;
+        }
+    }
 
     let digits = num.toString().split('');
     return parseInt(digits.map(parse).map(increment).join(''));
 }
 
 console.log(boost(5629)); //6730
+
+function filter(array) {
+    for (let i = 0; i < array.length; i++) {
+        let answer = [];
+        //I'm going to do an action to every element in the array
+         //I'm going to create a new array
+        let newAnswer = [];
+        //I'm going to create a new array
+//I know I'm going to want to use array.push in here
+    }
+}
+
+//not quite but not a blank screen so there's that.  :)
+
+function map(action, array) {
+    let answer = [];
+    for (let i = 0; i < array.length; i++) {
+        function addFive(n) {
+            return n + 5
+        }
+        let action = addFive(6)
+        
+  return answer;
+}
+       console.log( map(addFive(6), answer));
+    
